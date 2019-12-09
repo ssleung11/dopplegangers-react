@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/dopplegangers-react/static/css/main.d492e5ec.chunk.css",
+    "main.js": "/dopplegangers-react/static/js/main.078a078c.chunk.js",
+    "main.js.map": "/dopplegangers-react/static/js/main.078a078c.chunk.js.map",
+    "runtime-main.js": "/dopplegangers-react/static/js/runtime-main.5449ee8d.js",
+    "runtime-main.js.map": "/dopplegangers-react/static/js/runtime-main.5449ee8d.js.map",
+    "static/js/2.5ded3b62.chunk.js": "/dopplegangers-react/static/js/2.5ded3b62.chunk.js",
+    "static/js/2.5ded3b62.chunk.js.map": "/dopplegangers-react/static/js/2.5ded3b62.chunk.js.map",
+    "index.html": "/dopplegangers-react/index.html",
+    "precache-manifest.dc2a890e0a8bcf7266698d6dea423015.js": "/dopplegangers-react/precache-manifest.dc2a890e0a8bcf7266698d6dea423015.js",
+    "service-worker.js": "/dopplegangers-react/service-worker.js",
+    "static/css/main.d492e5ec.chunk.css.map": "/dopplegangers-react/static/css/main.d492e5ec.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5449ee8d.js",
+    "static/js/2.5ded3b62.chunk.js",
+    "static/css/main.d492e5ec.chunk.css",
+    "static/js/main.078a078c.chunk.js"
+  ]
+}
