@@ -1,46 +1,136 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Dopplegangers</title>
-    <link rel="stylesheet" href="styles.css"> 
-    <style>
-      html {
-        background-color: black;
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dopplegangers</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-deep: #0a0a0b;
+      --text-primary: #ffffff;
+      --text-secondary: #adadb0;
+      --text-muted: #6b6b70;
+    }
+
+    body {
+      background-color: var(--bg-deep);
+      color: var(--text-primary);
+      font-family: "Inter", sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #content {
+      max-width: 640px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 100px;
+      /* Space for the fixed button on mobile */
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    #paragraph {
+      font-size: 16px;
+      text-align: left;
+      color: var(--text-primary);
+      line-height: 1.8;
+    }
+
+    #explore-link {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 46px;
+      padding: 0 24px;
+      border: 1px solid var(--text-muted);
+      background: rgba(0, 0, 0, 0.8);
+      color: var(--text-primary);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      cursor: pointer;
+      z-index: 100;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      backdrop-filter: blur(10px);
+      box-sizing: border-box;
+    }
+
+    #explore-link:hover {
+      border-color: var(--text-primary);
+      background: var(--text-primary);
+      color: black;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 24px 16px;
+      }
+
+      #explore-link {
+        bottom: 24px;
+        right: 24px;
+        left: 24px;
+        height: 56px;
         text-align: center;
-        color: white;
-        margin: 30px auto;
-        padding-right: 30%;
-        padding-left: 30%;
-        font-family: "Helvetica";
-        
+        background: var(--text-primary);
+        color: black;
+        border-color: var(--text-primary);
       }
 
-        #paragraph { 
-        margin-top: 30px;
-        margin-left: vh;
-        margin-right: vw;
-        font-size: 16px;
-        text-align: left;
-        color: white;
-
+      #paragraph {
+        font-size: 15px;
       }
+    }
+  </style>
+</head>
 
-    </style>
-  </head>
-  <body>
-    
+<body>
+  <div id="content">
+    <div class="video-wrapper">
+      <iframe src="https://player.vimeo.com/video/382802050" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
-      <div id="content">
-      <iframe src="https://player.vimeo.com/video/382802050" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-        <div id="paragraph"> <strong>Doppelgänger | 2019</strong>
-          <br><br>
-          <i>"You look like a Paul Gauguin painting"</i>
-          <br><br>
-          &nbsp   &nbsp  &nbsp  &nbsp  &nbsp This project is an exploration of images from the Met Museum Collection in an attempt to find my art doppelgänger. I used machine learning to cluster images of portraits from the collection, and myself to see if I would be grouped near any Paul Gauguin paintings. Explore the project to see my results.
-          <br><br>  
-          <a href="./">Explore Project</a>      
+    <div id="paragraph">
+      <h1 style="font-size: 24px; margin-bottom: 16px; letter-spacing: -1px;">Doppelgänger | 2019</h1>
+      <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 24px;">"You look like a Paul Gauguin
+        painting"</p>
+      <p>
+        This project is an exploration of images from the Met Museum Collection in an attempt to find my art
+        doppelgänger. I used machine learning to cluster images of portraits from the collection, and myself to see if I
+        would be grouped near any Paul Gauguin paintings. Explore the project to see my results.
+      </p>
+      <a href="./" id="explore-link">Explore Project Details</a>
     </div>
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
